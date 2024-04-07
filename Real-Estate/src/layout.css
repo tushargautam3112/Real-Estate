@@ -8,12 +8,12 @@
     padding-left: 20px;
     padding-right: 20px;
 }
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
     .layout {
         background-color: rgb(169, 165, 143);
         max-width: 540px;
     }
-}
+} */
 
 @media (min-width: 577px) and (max-width: 768px) {
     .layout {
@@ -34,5 +34,7 @@
         background-color: blanchedalmond;
         max-width: 90%;
     }
+}.content{
+    /* background-color: aqua; */
 }
 
