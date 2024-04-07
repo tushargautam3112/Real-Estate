@@ -1,6 +1,6 @@
-import "./Home.css"
-// import SearchBar  from "/components/Searchbar/SearchBar";
-import SearchBar from "/Real-Estate/src/components/Searchbar/SearchBar";
+import SearchBar from "../../components/SearchBar";
+import "./Home.css";
+
 function home() {
   return (
     <div className="homePage">
@@ -13,7 +13,7 @@ function home() {
             facilis id pariatur fugit quos laudantium temporibus dolor ea
             repellat provident impedit!
           </p>
-          <SearchBar/>
+          <SearchBar />
           <div className="boxes">
             <div className="box">
               <h1>16+</h1>

@@ -1,4 +1,7 @@
-import "./Searchbar.css"
+import { useState } from "react";
+import "./Searchbar/Searchbar.css";
+
+const types = ["buy", "rent"];
 
 function SearchBar() {
     const [query, setQuery] = useState({
@@ -16,7 +19,7 @@ function SearchBar() {
       setQuery((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     };
   
-    return (
+    return(
       <div className="searchBar">
         <div className="type">
           {types.map((type) => (
@@ -33,9 +36,14 @@ function SearchBar() {
           <input type="text" name="city" placeholder="City" onChange={handleChange}
           />
           <input
-            type="number"name="minPrice"min={0} max={10000000} placeholder="Min Price" onChange={handleChange}
+            type="number"
+            name="minPrice"
+            min={0}
+             max={10000000}
+            placeholder="Min Price"
+             onChange={handleChange}
           />
-          <inpu
+          <input
             type="number" name="maxPrice"min={0} max={10000000} placeholder="Max Price" onChange={handleChange}
           />
             <button>
@@ -44,6 +52,7 @@ function SearchBar() {
           
         </form>
       </div>
+     
     );
   }
   
