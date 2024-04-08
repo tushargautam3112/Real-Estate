@@ -1,4 +1,4 @@
-import SearchBar from "../../components/SearchBar";
+import SearchBar from "../../Components/SearchBar";
 import "./Home.css";
 
 function home() {

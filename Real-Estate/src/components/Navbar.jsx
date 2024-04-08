@@ -23,7 +23,7 @@ function Navbar() {
             <a href="/register" className="register">
               Sign up
             </a>
-        <div className="menuIcon">
+        {/* <div className="menuIcon">
           <img src="/Real-Estae/public/hamburger.png" alt="" onClick={() => setOpen((prev) => !prev)} />
         </div>
         <div className={open ? "menu active" : "menu"}>
@@ -33,7 +33,7 @@ function Navbar() {
           <a href="/">Agents</a>
           <a href="/">Sign in</a>
           <a href="/">Sign up</a>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

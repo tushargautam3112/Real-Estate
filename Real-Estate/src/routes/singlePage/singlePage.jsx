@@ -5,10 +5,10 @@
 // }
 import React from 'react'
 
-const singlePage = () => {
+const SinglePage = () => {
   return (
     <div>singlePage</div>
   )
 }
 
-export default singlePage
+export default SinglePage

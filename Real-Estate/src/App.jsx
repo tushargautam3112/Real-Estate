@@ -1,7 +1,7 @@
 import Home from "./routes/homePage/Home";
-import Layout from "./routes/layout/layout";
-import listPage from "./routes/listPage/listPage";
-import singlePage from "./routes/singlePage/singlePage";
+import Layout from "./routes/layout/Layout";
+import ListPage from "./routes/listPage/ListPage";
+import SinglePage from "./routes/singlePage/SinglePage";
 
 import{
     createBrowserRouter,
@@ -22,11 +22,11 @@ function App() {
                 },
                 {
                     path: "/list",
-                    element: <listPage />
+                    element: <ListPage />
                 },
                 {
                     path: "/:id",
-                    element: <singlePage />
+                    element: <SinglePage />
                 }
             ]
         }

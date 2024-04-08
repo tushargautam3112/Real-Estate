@@ -1,17 +1,22 @@
-// export default function listPage(){
-//   return (
-//     <div>
-//       listpage
-//     </div>
-//   );
-// }
+import Filter from "../../Components/Filter";
+import Card from "../../Components/card/Card";
+import { listData } from "../../lib/dummydata";
+import "./listPage.scss";
 
-import React from 'react'
+export default function ListPage(){
 
-const listPage = () => {
+  const data = listData;
   return (
-    <div>listPage</div>
-  )
+    <div className="listPage">
+      <div className="listContainer">
+         <div className="wrapper"> {/*Filter section inside this */}
+            <Filter />
+            {data.map(item => (
+              <Card key={item.id} item={item} /> 
+            ))}
+        </div>
+      </div>
+      <div className="mapContainer">Map</div>
+    </div>
+  );
 }
-
-export default listPage
