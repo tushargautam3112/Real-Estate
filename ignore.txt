@@ -1,3 +1,0 @@
-React Router : Switch between pages on the client side.
-
-React Outlet : used to determine where child routes of parent routes should be displayed within the parent routes instead of a new page
