@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Searchbar/Searchbar.css";
+import "./Searchbar/searchBar.scss";
 
 const types = ["buy", "rent"];
 

@@ -44,7 +44,7 @@ export default function Filter(){
         </div>
 
         <button>
-          <img src="../../public/search.png" />
+          <img src="/search.png" />
         </button>
         
       </div>
