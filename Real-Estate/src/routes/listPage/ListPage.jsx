@@ -16,9 +16,9 @@ export default function ListPage(){
               <Card key={item.id} item={item} /> 
             ))}
         </div>
-      </div>
       <div className="mapContainer">
         <Map items={data} />
+      </div>
       </div>
     </div>
   );
