@@ -20,7 +20,6 @@ function RequireAuth() {
         <div className="content">
           <Outlet />
         </div>
-
       </div>
   );
 }

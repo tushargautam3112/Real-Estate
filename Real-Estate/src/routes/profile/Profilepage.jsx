@@ -1,4 +1,5 @@
 import React,{useContext} from 'react'
+import { Link } from 'react-router-dom';
 import Listt from '../../components/list/Listt';
 import "./profilepage.scss"
 import { useNavigate } from 'react-router';
@@ -24,7 +25,9 @@ function Profilepage() {
         <div className="wrapper">
             <div className="title">
                 <h1>User Information</h1>
-                <button>Update Profile</button>
+                <Link to='/profile/edit'>
+                    <button>Update Profile</button>
+                </Link>
             </div>
             <div className="info">
                 <span>
@@ -33,7 +36,7 @@ function Profilepage() {
                 </span>
                 <span>Username: <b>{currentUser.username}</b></span>
                 <br />
-                <span>Email : <b>{currentUser.email}</b></span>
+                <span>Email: <b>{currentUser.email}</b></span>
             </div>
             <button onClick={handleLogout}>Logout</button>
             <div className="title">
