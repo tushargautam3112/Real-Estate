@@ -1,5 +1,5 @@
 import { listData, userData } from "../../lib/dummydata";
-import Slider from "../../Components/slider/Slider";
+import Slider from "../../components/slider/Slider";
 import {singlePostData} from "../../lib/dummydata";
 import "./singlePage.scss";
 
