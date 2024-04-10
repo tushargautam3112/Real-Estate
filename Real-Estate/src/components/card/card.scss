@@ -1,7 +1,7 @@
 .card{
   display: flex;
   gap: 20px;
-  overflow-y:scroll;
+  // overflow-y:scroll;
   
   .imageContainer{
     flex: 2;
@@ -43,7 +43,7 @@
 
     .address{
       display: flex;
-      justify-content: center;
+      align-items: center;
       font-size: 14px;
       gap: 5px;
       color: #888;
@@ -61,7 +61,6 @@
       display: flex;
       justify-content: space-between;
       gap: 10px;
-      border-style: solid;
 
       .features{
         display: flex;

@@ -6,7 +6,7 @@ export default function Card({item}){
     <div className="card">
       {/* Using React router DOM link component instead of anchor tag */}
       <Link to={`/${item.id}`} className="imageContainer">
-        <img src={item.img} alt="" />
+          <img src={item.img} alt="" />
       </Link>
       <div className="textContainer">
         <h2 className="title">
