@@ -1,7 +1,9 @@
 import Home from "./routes/homePage/Home";
 import Layout from "./routes/layout/Layout";
 import ListPage from "./routes/listPage/ListPage";
+import Register from "./routes/register/Register";
 import SinglePage from "./routes/singlePage/SinglePage";
+import Login from "./routes/loginPage/Login";
 
 import{
     createBrowserRouter,
@@ -23,6 +25,14 @@ function App() {
                 {
                     path: "/list",
                     element: <ListPage />
+                },
+                {
+                    path: "/register",
+                    element: <Register/>
+                },
+                {
+                    path: "/login",
+                    element: <Login/>
                 },
                 {
                     path: "/:id",
