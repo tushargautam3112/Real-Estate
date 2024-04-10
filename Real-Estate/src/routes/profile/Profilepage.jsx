@@ -47,7 +47,9 @@ function Profilepage() {
             <Listt/>
         </div>
         <div className="chatContainer">
-            <div className="wrapper">chat</div>
+            <div className="wrapper">
+                <Chat/>
+            </div>
         </div>
        </div>
     </div>

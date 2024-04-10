@@ -1,23 +1,39 @@
-// @import "../../responsive.scss";
 
+@mixin sm {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
 .profilePage {
   display: flex;
   height: 100%;
 
-//   @include md{
-//     flex-direction: column;
-//     overflow: scroll;
-//   }
+  @include md{
+    flex-direction: column;
+    overflow: scroll;
+  }
 
   .details {
     flex: 3;
     overflow-y: scroll;
     padding-bottom: 50px;
 
-    // @include md{
-    //   flex:none;
-    //   height: max-content;
-    // }
+    @include md{
+      flex:none;
+      height: max-content;
+    }
 
     .wrapper{
       padding-right: 50px;
@@ -74,13 +90,13 @@
   }
   .chatContainer {
     flex: 2;
-    background-color: #fcf5f3;
+    background-color: midnightblue;
     height: 100%;
 
-    // @include md{
-    //   flex:none;
-    //   height: max-content;
-    // }
+    @include md{
+      flex:none;
+      height: max-content;
+    }
 
     .wrapper{
       padding: 0px 20px;
