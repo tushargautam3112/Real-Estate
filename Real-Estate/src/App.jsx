@@ -1,3 +1,4 @@
+import { listPageLoader, profilePageLoader } from "./lib/loader";
 import Home from "./routes/homePage/Home";
 // import Home form "../routes/layout/Home";
 import Layout from "./routes/layout/Layout";
@@ -19,19 +20,21 @@ function App() {
             children:[
                 {
                     path : "/",
-                    element: <Home/>
+                    element: <Home/>,
                 },
                 {
                     path: "/list",
-                    element: <ListPage />
+                    element: <ListPage />,
+                    loader : listPageLoader ,
                 },
                 {
                     path: "/:id",
-                    element: <SinglePage />
+                    element: <SinglePage />,
                 },
                 {
                     path: "/profile",
-                    element: <Profilepage/>
+                    element: <Profilepage/>,
+                    loader : profilePageLoader ,
                 }
             ]
         }

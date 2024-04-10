@@ -15,3 +15,24 @@ model User {
   avatar    String?
   createdAt DateTime @default(now())
 }
+
+// line no 84  3 51 20 
+
+model Chat {
+   id         String      @id @default(auto()) @map("_id") @db.ObjectId
+   users      User[]      @relation(fields: [userIDs] , references: [ id])
+   userIDs    String[]    @db.ObjectId 
+   createdAt  DateTime   @default(now())
+   seenBy     String[]  @db.ObjectId
+   messages   Message[]
+   lastMessage String?
+}
+
+model Message {
+  id           String      @id @default(auto()) @map("_id") @db.ObjectId
+  text         String 
+  userId       String
+  chat         Chat        @relation(fields: [chatId] , references: [id])
+  chatId       String       @db.ObjectId
+  createdAt    DateTime     @default(now())
+}
