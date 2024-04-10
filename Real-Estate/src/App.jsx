@@ -1,8 +1,9 @@
 import Home from "./routes/homePage/Home";
+// import Home form "../routes/layout/Home";
 import Layout from "./routes/layout/Layout";
 import ListPage from "./routes/listPage/ListPage";
+import Profilepage from "./routes/profile/Profilepage";
 import SinglePage from "./routes/singlePage/SinglePage";
-
 import{
     createBrowserRouter,
     RouterProvider,
@@ -18,7 +19,7 @@ function App() {
             children:[
                 {
                     path : "/",
-                    element: <Home />
+                    element: <Home/>
                 },
                 {
                     path: "/list",
@@ -27,6 +28,10 @@ function App() {
                 {
                     path: "/:id",
                     element: <SinglePage />
+                },
+                {
+                    path: "/profile",
+                    element: <Profilepage/>
                 }
             ]
         }
