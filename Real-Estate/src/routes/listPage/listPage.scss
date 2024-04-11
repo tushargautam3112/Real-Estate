@@ -1,14 +1,16 @@
 .listPage {
   display: flex;
   height: 100%;
-  // border-style: solid;
 
   .listContainer {
     flex: 3;
     height: 100%;
+    width: 100%;
     display: flex;
+    // border-style: solid;
     
     .wrapper{
+      // border: solid;
       height: 100%;
       padding-right: 50px;
       display: flex;
@@ -20,8 +22,12 @@
   }
   .mapContainer {
     flex: 2;
-    height: 100%;
-    background-color: #fcf5f3;
-
+    // height: 100%;
+    // background-color: #fcf5f3;
+    background-color: white;
+    // border-style: solid;
+    // border-color: red;
+    height: 200vh;
+    margin-top: 70px;
   }
 }
