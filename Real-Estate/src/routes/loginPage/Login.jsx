@@ -41,7 +41,7 @@ export default function Login() {
           <input name="password" required minLength={4} type="password" placeholder="Password" />
           <button disabled={isLoading}>Login</button>
           {error && <span>{error}</span>}
-          <Link to="/login">Have an account?</Link>
+          <Link to="/register">New Here?</Link>
         </form>
       </div>
       <div className='imgContainer'>

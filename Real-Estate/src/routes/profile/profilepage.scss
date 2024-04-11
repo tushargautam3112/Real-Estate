@@ -63,6 +63,12 @@
         flex-direction: column;
         gap: 20px;
 
+        .profileAvatar{
+          height: 200px;
+          width: 200px;
+          background-color: red;
+        }
+
         span{
           display: flex;
           align-items: center;

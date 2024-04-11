@@ -11,3 +11,15 @@ body{
   font-family:  sans-serif;
   overflow: hidden;
 }
+input{
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+}
+button{
+  padding: 12px 24px;
+  background-color: #fece51;
+  cursor: pointer;
+  border: none;
+  max-width: 150px;
+}
