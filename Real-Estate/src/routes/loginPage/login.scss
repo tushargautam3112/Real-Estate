@@ -159,6 +159,7 @@
   
         h1 {
           text-align: center;
+          margin: 10px;
         }
   
         input {
@@ -168,16 +169,17 @@
           padding: 10px;
           margin: 10px;
           transition: transform 0.2s ease-in-out;
-          box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5), 0 10px 15px -3px rgba(0, 123, 255, 0.5), 0 4px 6px -2px rgba(0, 123, 255, 0.5);
           &:focus {
             outline: none;
             border-color: #007bff;
             box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            // border-width: 0.5px;
           }
   
           &:hover {
-            border-color: #007bff;
+            border:0.5px transparent #007bff;
             transform: scale(1.05);
+            box-shadow: 0 0 0 0.5px rgba(0, 123, 255, 0.5), 0 10px 15px -3px rgba(0, 123, 255, 0.5), 0 4px 6px -2px rgba(0, 123, 255, 0.5);
           }
           
         }
@@ -185,6 +187,7 @@
         button {
           width: 95%;
           padding: 15px;
+          margin: 10px;
           background-color: #007bff;
           color: white;
           border: 2px transparent;
