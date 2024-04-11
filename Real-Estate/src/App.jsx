@@ -6,6 +6,7 @@ import Register from "./routes/register/Register";
 import Login from "./routes/loginPage/Login";
 import Profilepage from "./routes/profile/Profilepage";
 import SinglePage from "./routes/singlePage/SinglePage";
+import ProfileEditPage from "./routes/profileEditPage/ProfileEditPage";
 
 import{
     createBrowserRouter,
@@ -49,6 +50,10 @@ function App() {
                 {
                     path: "/profile",
                     element: <Profilepage/>
+                },
+                {
+                    path: "/profile/edit",
+                    element: <ProfileEditPage/>
                 }
             ]
         }
