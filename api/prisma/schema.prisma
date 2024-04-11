@@ -20,34 +20,11 @@ enum Property {
 }
 
 model User {
-  id         String      @id @default(auto()) @map("_id") @db.ObjectId
-  email      String      @unique
-  username   String      @unique
-  password   String
-  avatar     String?
-  createdAt  DateTime    @default(now())
-  posts      Post[]
-  savedPosts SavedPost[]
-  chats      Chat[]      @relation(fields: [chatIDs], references: [id])
-  chatIDs    String[]    @db.ObjectId
-}
-
-model Chat {
-  id          String    @id @default(auto()) @map("_id") @db.ObjectId
-  users       User[]    @relation(fields: [userIDs], references: [id])
-  userIDs     String[]  @db.ObjectId
-  createdAt   DateTime  @default(now())
-  seenBy      String[]  @db.ObjectId
-  messages    Message[]
-  lastMessage String?
-}
-
-model Message {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  text      String
-  userId    String
-  chat      Chat     @relation(fields: [chatId], references: [id])
-  chatId    String   @db.ObjectId
+  email     String   @unique
+  username  String   @unique
+  password  String
+  avatar    String?
   createdAt DateTime @default(now())
   Post      Post[]
 }
@@ -62,10 +39,25 @@ model Post {
   property  Property
   rooms     Int
   bathrooms Int
-  img       String
+  images    String[]
   address   String
   city      String
   latitude  String
   longitude String
   createdAt DateTime @default(now())
+  postDetail PostDetail?
+}
+
+model PostDetail {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  desc String
+  utilities String?
+  pet String?
+  income String?
+  size String?
+  school Int?
+  bus Int?
+  restaurant Int?
+  post Post @relation(fields: [postId], references: [id])
+  postId String @db.ObjectId @unique
 }

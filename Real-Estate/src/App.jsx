@@ -8,6 +8,7 @@ import Login from "./routes/loginPage/Login";
 import Profilepage from "./routes/profile/Profilepage";
 import SinglePage from "./routes/singlePage/SinglePage";
 import ProfileEditPage from "./routes/profileEditPage/ProfileEditPage";
+import NewPostPage from "./routes/newPostPage/NewPostPage"
 
 import{
     createBrowserRouter,
@@ -53,6 +54,16 @@ function App() {
                     path: "/profile",
                     element: <Profilepage/>,
                     loader : profilePageLoader ,
+                },
+                {
+                    path: "/profile/edit",
+                    element: <ProfileEditPage/>,
+                    loader : profilePageLoader ,
+                },
+                {
+                    path: "/add",
+                    element: <NewPostPage/>,
+                    loader: profilePageLoader
                 }
             ]
         }

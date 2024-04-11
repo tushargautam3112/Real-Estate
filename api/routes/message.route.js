@@ -1,7 +1,7 @@
 import express from "express";
 import {
   addMessage
-} from "../controllers/message.controller.js";
+} from "../controllers/messages.controller.js";
 import {verifyToken} from "../middleware/verifyToken.js";
 
 const router = express.Router();
