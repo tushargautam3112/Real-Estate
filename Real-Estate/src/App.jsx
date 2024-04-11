@@ -1,5 +1,5 @@
 import Home from "./routes/homePage/Home";
-// import Home form "../routes/layout/Home";
+
 import {Layout, RequireAuth}  from "./routes/layout/Layout";
 import ListPage from "./routes/listPage/ListPage";
 import Register from "./routes/register/Register";

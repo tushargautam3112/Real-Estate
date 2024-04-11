@@ -5,6 +5,7 @@ import "./profilepage.scss"
 import { useNavigate } from 'react-router';
 import { AuthContext } from '../../context/AuthContext';
 import apiRequest from '../../lib/apiRequest';
+import Chat from '../../components/chat/Chat';
 
 
 function Profilepage() {
@@ -24,17 +25,16 @@ function Profilepage() {
        <div className='details'>
         <div className="wrapper">
             <div className="title">
-                <h1>User Information</h1>
+                <h1>Profile</h1>
                 <Link to='/profile/edit'>
-                    <button>Update Profile</button>
+                    <button>Edit Profile</button>
                 </Link>
             </div>
             <div className="info">
                 <span>
-                    Avatar:
-                    <img src={currentUser.avatar || "noavatar.jpg"} alt="" />
+                    <img src={currentUser.avatar || "noavatar.jpg"} alt="" className='profileAvatar'/>
                 </span>
-                <span>Username: <b>{currentUser.username}</b></span>
+                <span><b>{currentUser.username}</b></span>
                 <br />
                 <span>Email: <b>{currentUser.email}</b></span>
             </div>
@@ -50,7 +50,9 @@ function Profilepage() {
             <Listt/>
         </div>
         <div className="chatContainer">
-            <div className="wrapper">chat</div>
+            <div className="wrapper">
+                <Chat/>
+            </div>
         </div>
        </div>
     </div>

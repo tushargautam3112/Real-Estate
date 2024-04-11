@@ -1,7 +1,8 @@
 import Filter from "../../components/Filter";
 import Card from "../../components/card/Card";
 import { listData } from "../../lib/dummydata";
-import "./listPage.scss";
+import Map from "../../components/map/Map";
+import "./listPage.scss"
 
 export default function ListPage(){
 
