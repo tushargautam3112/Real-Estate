@@ -1,5 +1,4 @@
-import React,{useContext} from 'react'
-import { Link } from 'react-router-dom';
+import React,{Suspense, useContext} from 'react'
 import Listt from '../../components/list/Listt';
 import "./profilepage.scss"
 import { useNavigate } from 'react-router';
@@ -51,6 +50,14 @@ function Profilepage() {
         </div>
         <div className="chatContainer">
             <div className="wrapper">
+               <Suspense fallback={<p>Loading..</p>} >
+                 <Await  
+                 resolve={data.chatResponse} 
+                 errorElement={<p>Error loading Chats !</p>}
+                 >
+                   {(chatResponse) => <Chat chats={chatResponse.data} /> }
+                 </Await>
+               </Suspense>
                 <Chat/>
             </div>
         </div>

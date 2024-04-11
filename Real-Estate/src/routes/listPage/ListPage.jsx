@@ -5,7 +5,8 @@ import Map from "../../components/map/Map";
 import "./listPage.scss"
 
 export default function ListPage(){
-
+   // 3 45 50 
+  
   const data = listData;
   return (
     <div className="listPage">
