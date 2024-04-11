@@ -17,3 +17,4 @@ export default function Map({items}){
   </MapContainer>
   );
 }
+// New Delhi - 28.6139, 77.2090

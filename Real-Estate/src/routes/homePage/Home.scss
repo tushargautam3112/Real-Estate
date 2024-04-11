@@ -32,6 +32,10 @@
       gap: 50px;
       height: 100%;
 
+      p{
+        font-size: 20px;
+      }
+
       @include lg{
         padding-right: 50px;
       }
