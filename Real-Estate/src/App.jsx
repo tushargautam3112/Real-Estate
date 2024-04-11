@@ -53,6 +53,11 @@ function App() {
                     path: "/profile",
                     element: <Profilepage/>,
                     loader : profilePageLoader ,
+                },
+                {
+                    path: "/profile/edit",
+                    element: <ProfileEditPage/>,
+                    loader : profilePageLoader ,
                 }
             ]
         }

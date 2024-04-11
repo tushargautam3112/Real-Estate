@@ -5,6 +5,7 @@ import chatRoute from "./routes/chat.route.js"
 import messageRoute from "./routes/message.route.js"
 import cookieParser from "cookie-parser"
 import testRoute from "./routes/test.route.js"
+import userRoute from "./routes/user.route.js"
 import cors from "cors"
 
 const app = express();
@@ -16,7 +17,7 @@ app.use(cookieParser());
 app.use("/api/posts", postRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/test", testRoute);
-app.use("/api/users",useRoute);
+app.use("/api/users",userRoute);
 app.use("/api/chats", chatRoute);
 app.use("/api/messages",messageRoute);
 
