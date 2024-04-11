@@ -39,7 +39,7 @@ model Post {
   property  Property
   rooms     Int
   bathrooms Int
-  images       String[]
+  images    String[]
   address   String
   city      String
   latitude  String
