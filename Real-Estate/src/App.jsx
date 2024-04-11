@@ -1,3 +1,4 @@
+import { listPageLoader, profilePageLoader } from "./lib/loader";
 import Home from "./routes/homePage/Home";
 
 import {Layout, RequireAuth}  from "./routes/layout/Layout";
@@ -23,11 +24,12 @@ function App() {
             children:[
                 {
                     path : "/",
-                    element: <Home/>
+                    element: <Home/>,
                 },
                 {
                     path: "/list",
-                    element: <ListPage />
+                    element: <ListPage />,
+                    loader : listPageLoader ,
                 },
                 {
                     path: "/register",
@@ -39,7 +41,7 @@ function App() {
                 },
                 {
                     path: "/:id",
-                    element: <SinglePage />
+                    element: <SinglePage />,
                 },
             ]
         },
@@ -49,11 +51,8 @@ function App() {
             children:[
                 {
                     path: "/profile",
-                    element: <Profilepage/>
-                },
-                {
-                    path: "/profile/edit",
-                    element: <ProfileEditPage/>
+                    element: <Profilepage/>,
+                    loader : profilePageLoader ,
                 }
             ]
         }

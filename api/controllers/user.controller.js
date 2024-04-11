@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+ 
+//from line no 114
+ export const profilePosts = async(req ,res) => {
+    const tokenUserId= req.params.userId;
+      
+    try {
+       const userPosts = await prisma.post.findMany({
+         where : { userId : tokenUserId },
+       });
+
+       const saved = await prisma.post.findMany({
+        where : { userId : tokenUserId },
+        includes : {
+            post :true ,
+        },
+      });
+
+      const savedPosts = saved.map( item=>item.post)
+      res.status(200).json({userPosts , savedPosts});
+
+    } catch (err){
+      console.log(err);
+      res.status(500).json({ message : "Failed to get profile post "});
+    }
+};
+=======
 import prisma from "../lib/prisma.js"
 import bcrypt from "bcrypt"
 
@@ -68,3 +95,4 @@ export const deleteUser = async (req,res) => {
         res.status(500).json({message: "failed to delete user"})
     }
 }
+>>>>>>> 07fbc3de46e331c8b293a17c60cc10cecb7f9e16
