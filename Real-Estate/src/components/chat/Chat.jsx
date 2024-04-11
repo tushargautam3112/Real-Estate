@@ -2,8 +2,8 @@ import { useContext, useEffect, useRef, useState } from "react";
 import "./chat.scss";
 import { AuthContext } from "../../context/AuthContext";
 import apiRequest from "../../lib/apiRequest";
-import { format } from "timeago.js";
-import { useNotificationStore } from "../../lib/notificationStore";
+// import { format } from "./timeago.js";
+// import { useNotificationStore } from "../../lib/apiRequest";
 
 function Chat({ chats }) {
   const [chat, setChat] = useState(null);
