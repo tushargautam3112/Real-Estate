@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import apiRequest from '../../lib/apiRequest'
+import "./Register.scss"
 
 const Register = () => {
     const [error,setError] = useState("")
