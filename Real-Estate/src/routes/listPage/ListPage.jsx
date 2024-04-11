@@ -1,7 +1,8 @@
 import Filter from "../../components/Filter";
 import Card from "../../components/card/Card";
 import { listData } from "../../lib/dummydata";
-import "./listPage.scss";
+import Map from "../../components/map/Map";
+import "./listPage.scss"
 
 export default function ListPage(){
    // 3 45 50 
@@ -16,9 +17,9 @@ export default function ListPage(){
               <Card key={item.id} item={item} /> 
             ))}
         </div>
-      </div>
       <div className="mapContainer">
         <Map items={data} />
+      </div>
       </div>
     </div>
   );

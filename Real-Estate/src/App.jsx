@@ -1,10 +1,13 @@
 import { listPageLoader, profilePageLoader } from "./lib/loader";
 import Home from "./routes/homePage/Home";
-// import Home form "../routes/layout/Home";
-import Layout from "./routes/layout/Layout";
+
+import {Layout, RequireAuth}  from "./routes/layout/Layout";
 import ListPage from "./routes/listPage/ListPage";
+import Register from "./routes/register/Register";
+import Login from "./routes/loginPage/Login";
 import Profilepage from "./routes/profile/Profilepage";
 import SinglePage from "./routes/singlePage/SinglePage";
+
 import{
     createBrowserRouter,
     RouterProvider,
@@ -28,9 +31,23 @@ function App() {
                     loader : listPageLoader ,
                 },
                 {
+                    path: "/register",
+                    element: <Register/>
+                },
+                {
+                    path: "/login",
+                    element: <Login/>
+                },
+                {
                     path: "/:id",
                     element: <SinglePage />,
                 },
+            ]
+        },
+        {
+            path:"/",
+            element:<RequireAuth/>,
+            children:[
                 {
                     path: "/profile",
                     element: <Profilepage/>,

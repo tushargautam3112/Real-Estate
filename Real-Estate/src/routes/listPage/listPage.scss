@@ -1,25 +1,33 @@
-
-.listPage{
+.listPage {
   display: flex;
-  height: 100%; // 100% error
+  height: 100%;
 
-  .listContainer{
+  .listContainer {
     flex: 3;
     height: 100%;
-
+    width: 100%;
+    display: flex;
+    // border-style: solid;
+    
     .wrapper{
+      // border: solid;
       height: 100%;
       padding-right: 50px;
       display: flex;
       flex-direction: column;
       gap: 50px;
-      
-      
+      padding-bottom: 50px;
+      overflow-y: scroll;
     }
   }
-
-  .mapContainer{
+  .mapContainer {
     flex: 2;
-    background-color: #fcf5f3;
+    // height: 100%;
+    // background-color: #fcf5f3;
+    background-color: white;
+    // border-style: solid;
+    // border-color: red;
+    height: 200vh;
+    margin-top: 70px;
   }
 }
