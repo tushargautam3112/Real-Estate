@@ -7,11 +7,42 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum Deal {
+  buy
+  rent
+}
+
+enum Property {
+  house
+  banglow
+  apartment
+  land
+}
+
 model User {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   email     String   @unique
   username  String   @unique
   password  String
   avatar    String?
+  createdAt DateTime @default(now())
+  Post      Post[]
+}
+
+model Post {
+  userId    String   @db.ObjectId
+  user      User     @relation(fields: [userId], references: [id])
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  price     Int
+  deal      Deal
+  property  Property
+  rooms     Int
+  bathrooms Int
+  img       String
+  address   String
+  city      String
+  latitude  String
+  longitude String
   createdAt DateTime @default(now())
 }
