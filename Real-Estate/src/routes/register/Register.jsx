@@ -41,11 +41,12 @@ const Register = () => {
                 <input name="password" type="password" placeholder="Password"/>
                 <button disabled={isLoading}>Register</button>
                 {error && <span>{error}</span>}
-                <Link to="/login">Have an account?</Link>
+                <span>By creating an account you agree to our <span>Terms of Service and Privacy Policy.</span></span>
+                <Link to="/login">Already have an account?</Link>
             </form>
         </div>
         <div className='imgContainer'>
-            <img src="bg.png" alt=""/>
+            <img src="home3.jpeg" alt=""/>
         </div>
     </div>
   )

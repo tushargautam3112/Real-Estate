@@ -41,6 +41,7 @@
       display: flex;
       flex-direction: column;
       gap: 50px;
+      // border-style: solid;
 
       .title{
         display: flex;
@@ -54,15 +55,23 @@
         button{
           padding: 12px 24px;
           background-color: #fece51;
+          border-radius: 5px;
           cursor: pointer;
           border: none;
+          transition: all 0.4s ease;
+          &:hover{
+            scale: 1.05;
+          }
         }
       }
 
       .info{
         display: flex;
         flex-direction: column;
+        align-items: center;
+
         gap: 20px;
+        // border-style: solid;
 
         .profileAvatar{
           height: 200px;
@@ -74,16 +83,27 @@
           display: flex;
           align-items: center;
           gap: 20px;
+
+          font-size: 30px;
         }
 
         button{
-          width: 100px;
+          margin-top: 20px;
+          width: 120px;
+          height: 50px;
           background-color: teal;
           border: none;
           color: white;
           padding: 10px 20px;
           cursor: pointer;
-          border-radius: 5px;
+          border-radius: 10px;
+          font-size: 20px;
+
+          transition: all 0.4s ease;
+
+          &:hover{
+            scale: 1.05;
+          }
         }
 
         img{

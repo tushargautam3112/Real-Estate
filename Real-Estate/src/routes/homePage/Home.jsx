@@ -16,20 +16,6 @@ function home() {
           Welcome to Blissful Abodes, your premier destination for finding your dream property. Whether you're buying, selling, or renting, our user-friendly platform offers a diverse range of listings to suit your needs. Explore our extensive collection of homes, apartments, and commercial spaces with ease, backed by detailed information and immersive visuals. With our advanced search tools and expert guidance, your next real estate journey starts here. Discover your perfect space today!
           </p>
           <SearchBar />
-          {/* <div className="boxes">
-            <div className="box">
-              <h1>16+</h1>
-              <h2>Years of Experience</h2>
-            </div>
-            <div className="box">
-              <h1>200</h1>
-              <h2>Award Gained</h2>
-            </div>
-            <div className="box">
-              <h1>2000+</h1>
-              <h2>Property Ready</h2>
-            </div>
-          </div> */}
           
           <section id="about">
             <h1>About</h1>

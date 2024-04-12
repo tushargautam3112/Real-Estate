@@ -41,11 +41,11 @@ export default function Login() {
           <input name="password" required minLength={4} type="password" placeholder="Password" />
           <button disabled={isLoading}>Login</button>
           {error && <span>{error}</span>}
-          <Link to="/register">New Here?</Link>
+          <Link to="/register">Dont have an account?</Link>
         </form>
       </div>
       <div className='imgContainer'>
-        <img src="bg.png" alt="" />
+        <img src="houseimg.avif" alt="" />
       </div>
     </div>
   )

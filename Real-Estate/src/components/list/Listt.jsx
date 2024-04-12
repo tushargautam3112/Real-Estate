@@ -6,9 +6,13 @@ import "./List.scss"
 function Listt() {
   return (
     <div className='list'>
-        {listData.map(item=>(
-            <Card key={item.id} item={item}/>
-        ))}
+      <div className='listContainer'>
+        <div className="wrapper">
+          {listData.map(item=>(
+              <Card key={item.id} item={item}/>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

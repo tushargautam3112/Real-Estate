@@ -38,8 +38,8 @@ function Profilepage() {
                 <span><b>{currentUser.username}</b></span>
                 <br />
                 <span>Email: <b>{currentUser.email}</b></span>
-            </div>
             <button onClick={handleLogout}>Logout</button>
+            </div>
             <div className="title">
                 <h1>My List</h1>
                 <button>Create New Post</button>
