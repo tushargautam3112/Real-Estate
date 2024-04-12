@@ -4,16 +4,17 @@ import "./profilepage.scss"
 import { useNavigate } from 'react-router';
 import { AuthContext } from '../../context/AuthContext';
 import apiRequest from '../../lib/apiRequest';
-import { Link } from 'react-router-dom';
+import { Link,Await,useLoaderData } from 'react-router-dom';
 import Chat from '../../components/chat/Chat';
 
 
 function Profilepage() {
+    const data = useLoaderData();
     const {updateUser, currentUser} = useContext(AuthContext)
     const navigate = useNavigate()
     const handleLogout = async () => {
         try{
-            await apiRequest.post("auth/logout")
+            await apiRequest.post("/auth/logout")
             updateUser(null)
             navigate("/")
         } catch(err){
@@ -51,18 +52,16 @@ function Profilepage() {
         </div>
        </div>
         <div className="chatContainer">
-             {/* <div className="wrapper">
-               <Suspense fallback={<p>Loading..</p>} >
-                 <Await  
-                 resolve={data.chatResponse} 
-                 errorElement={<p>Error loading Chats !</p>}
-                 >
-                   {(chatResponse) => <Chat chats={chatResponse.data} /> }
-                 </Await>
+             <div className="wrapper">
+               <Suspense fallback={<p>Loading...</p>}>
+                    <Await
+                    resolve={data.chatResponse}
+                    errorElement={<p>Error loading chats!</p>}
+                    >
+                    {(chatResponse) => <Chat chats={chatResponse.data}/>}
+                   </Await>
                </Suspense>
-                <Chat/>
-            </div>  */}
-            message
+            </div>
         </div>
     </div>
   )
