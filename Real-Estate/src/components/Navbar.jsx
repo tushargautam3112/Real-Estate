@@ -19,11 +19,11 @@ function Navbar() {
       <div className="left">
         <a href="/" className="logo">
           <img src="https://img.freepik.com/premium-vector/home-icon-house-symbol-simple-vector-design-logo_231786-5048.jpg" alt="" />
-          <span>ReaL-EstatE</span>
+          <span>Blissful Abodes</span>
         </a>
         <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
         <a href="/">Agents</a>
       </div>
       <div className="right">

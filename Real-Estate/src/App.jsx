@@ -1,4 +1,4 @@
-import { listPageLoader, profilePageLoader } from "./lib/loader";
+import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loader";
 import Home from "./routes/homePage/Home";
 
 import {Layout, RequireAuth}  from "./routes/layout/Layout";
@@ -43,7 +43,8 @@ function App() {
                 {
                     path: "/:id",
                     element: <SinglePage />,
-                },
+                    loader: singlePageLoader
+                },           
             ]
         },
         {

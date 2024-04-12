@@ -18,7 +18,7 @@ export default function Card({item}){
           <span>{item.address}</span>
         </p>
 
-        <p className='price'>$ {item.price}</p>
+        <p className='price'>INR {item.price}</p>
         <div className="bottom">
           <div className="features">
             <div className="feature">
