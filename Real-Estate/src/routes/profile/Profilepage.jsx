@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router';
 import { AuthContext } from '../../context/AuthContext';
 import apiRequest from '../../lib/apiRequest';
 import { Link } from 'react-router-dom';
-// import Chat from '../../components/chat/Chat';
+import Chat from '../../components/chat/Chat';
 
 
 function Profilepage() {
@@ -49,8 +49,9 @@ function Profilepage() {
             </div>
             <Listt/>
         </div>
+       </div>
         <div className="chatContainer">
-            {/* <div className="wrapper">
+             {/* <div className="wrapper">
                <Suspense fallback={<p>Loading..</p>} >
                  <Await  
                  resolve={data.chatResponse} 
@@ -60,9 +61,9 @@ function Profilepage() {
                  </Await>
                </Suspense>
                 <Chat/>
-            </div> */}
+            </div>  */}
+            message
         </div>
-       </div>
     </div>
   )
 }
