@@ -8,7 +8,7 @@ import UploadPhotoWidget from '../../components/uploadPhotoWidget/UploadPhotoWid
 const ProfileEditPage = () => {
   const [error, setError] = useState("")
   const {currentUser, updateUser} = useContext(AuthContext)
-  const [avatar, setAvatar] = useState(currentUser.Avatar)
+  const [avatar, setAvatar] = useState([])
 
   const navigate = useNavigate()
 
@@ -19,7 +19,7 @@ const ProfileEditPage = () => {
     const {username,email,password} = Object.fromEntries(formData)
 
     try{
-      const res = await apiRequest.put(`/users/${currentUser.id}`,{ username, email, password, avatar })
+      const res = await apiRequest.put(`/users/${currentUser.id}`,{ username, email, password, avatar: avatar[0] })
       updateUser(res.data)
       console.log('updated')
       navigate("/profile")
@@ -50,14 +50,14 @@ const ProfileEditPage = () => {
         </form>
       </div>
       <div className='sideContainer'>
-        <img src={ currentUser.avatar || '/noavatar.jpg'} alt="" className='avatar'/>
+        <img src={ avatar[0] || currentUser.avatar || '/noavatar.jpg'} alt="" className='avatar'/>
         <UploadPhotoWidget uwConfig={{
           cloudName: "dama6n1ea",
           uploadPreset: "real-estate",
           multiple: false,
           folder: "avatars"
         }}
-        setAvatar={setAvatar}
+        setState={setAvatar}
         />
       </div>
     </div>
