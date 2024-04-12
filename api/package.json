@@ -5,7 +5,6 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    
     "generate": "npx prisma generate",
     "deploy": "npx prisma migrate deploy",
     "dev": "npm run generate && nodemon --watch \"src/**\" --ext \"js,json\" --exec \"node src/index.js\"",
