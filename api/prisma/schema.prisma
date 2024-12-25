@@ -18,8 +18,18 @@ enum Property {
   apartment
   land
 }
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String   @unique
+  username  String   @unique
+  password  String
+  avatar    String?
+  createdAt DateTime @default(now())
+  posts     Post[]
 
-
+  chats      Chat[]      @relation(fields: [chatIDs], references: [id])
+  chatIDs    String[]    @db.ObjectId
+}
 
 model Post {
   userId    String   @db.ObjectId
@@ -27,9 +37,7 @@ model Post {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   title     String
   price     Int
-  deal      Deal
   property  Property
-  rooms     Int
   bathrooms Int
   images    String[]
   address   String
@@ -53,18 +61,7 @@ model PostDetail {
   post Post @relation(fields: [postId], references: [id])
   postId String @db.ObjectId @unique
 }
-model User {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  email     String   @unique
-  username  String   @unique
-  password  String
-  avatar    String?
-  createdAt DateTime @default(now())
-  Post      Post[]
 
-  chats      Chat[]      @relation(fields: [chatIDs], references: [id])
-  chatIDs    String[]    @db.ObjectId
-}
 model Chat {
   id        String    @id @default(auto()) @map("_id") @db.ObjectId
   users     User[]    @relation(fields: [userIDs], references: [id])

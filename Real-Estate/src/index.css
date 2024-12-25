@@ -11,6 +11,8 @@ a{
 body{
   font-family:  sans-serif;
   overflow: hidden;
+  background-color: white;
+  color: black;
 }
 input{
   padding: 10px;

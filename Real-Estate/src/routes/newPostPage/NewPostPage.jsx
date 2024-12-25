@@ -11,7 +11,7 @@ function NewPostPage() {
   const [images, setImages] = useState([]);
   const [error, setError] = useState("");
 
-  const navigate = useNavigate()
+  const navigate = useNavigate()     
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,12 +22,10 @@ function NewPostPage() {
       const res = await apiRequest.post("/posts", {
         postData: {
           title: inputs.title,
-          price: parseInt(inputs.price),
+          price: parseInt(inputs.price) || 0,
           address: inputs.address,
           city: inputs.city,
-          rooms: parseInt(inputs.bedroom),
-          bathrooms: parseInt(inputs.bathroom),
-          deal: inputs.type,
+          bathrooms: parseInt(inputs.bathroom) || 0,
           property: inputs.property,
           latitude: inputs.latitude,
           longitude: inputs.longitude,
@@ -38,7 +36,7 @@ function NewPostPage() {
           utilities: inputs.utilities,
           pet: inputs.pet,
           income: inputs.income,
-          size: parseInt(inputs.size),
+          size: inputs.size,
           school: parseInt(inputs.school),
           bus: parseInt(inputs.bus),
           restaurant: parseInt(inputs.restaurant),
@@ -50,6 +48,8 @@ function NewPostPage() {
       setError(error);
     }
   };
+
+  
 
   return (
     <div className="newPostPage">
