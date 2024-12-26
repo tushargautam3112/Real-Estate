@@ -8,7 +8,7 @@ export default function Map({items}){
     <MapContainer center={
       items.length === 1
         ? [items[0].latitude, items[0].longitude]
-        : [20.5937, 78.9629]
+        : [28.7041, 77.1025]
     } zoom={6} scrollWheelZoom={false} className="map" >
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

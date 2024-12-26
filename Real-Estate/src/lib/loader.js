@@ -7,12 +7,15 @@ export const singlePageLoader = async ({ request ,params}) => {
     return res.data ;
 };
 
-export const listPageLoader = async ({ request ,params}) => {
-    const query =request.url.split("?")[1];
-    const postPromise =apiRequest("/posts" + query) ;
-    return defer({
-         postResponse : postPromise,
-    });
+export const listPageLoader = async ({ request }) => {
+  try {
+    const query = request.url.split("?")[1]; // Extract query string
+    const res = await apiRequest("/posts?" + query); // Await the API response
+    return res.data; // Return the resolved data
+  } catch (error) {
+    console.error("Error in listPageLoader:", error);
+    return null; // Return null or a fallback value
+  }
 };
     
 export const profilePageLoader = async () => {
