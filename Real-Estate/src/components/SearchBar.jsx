@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Searchbar/searchBar.scss";
+import { Link } from "react-router-dom";
 
 const types = ["buy", "rent"];
 
@@ -46,10 +47,11 @@ function SearchBar() {
           <input
             type="number" name="maxPrice"min={0} max={10000000} placeholder="Max Price" onChange={handleChange}
           />
+          <Link to={`list?type=${query.type}&city=${query.city}&minPrice=${query.minPrice}&maxPrice=${query.maxPrice}`}>
             <button>
               <img src="/search.png" alt="" />
             </button>
-          
+          </Link>
         </form>
       </div>
      
